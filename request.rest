@@ -1,0 +1,6 @@
+POST http://localhost:8080/shorturl
+Content-Type: application/json
+
+{
+    "url": "https://www.youtube.com/watch?v=XBHmmRCSm_E"
+}
