@@ -18,12 +18,10 @@ mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopol
 app.use(express.urlencoded({ extended: false }));
 
 
-app.get("/", (req, res) => {
-    const urls = ShortUrl.find()
+app.get("/", async(req, res) => {
+    const urls = await ShortUrl.find()
     res.json(urls)
 });
-
-console.log("Test")
 
 
 //shorten url and add to db
